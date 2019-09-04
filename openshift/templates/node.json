@@ -4,7 +4,7 @@
     "metadata": {
         "name": "plain-nodejs-example",
         "annotations": {
-            "openshift.io/display-name": "Jennie's plain Node.js 2",
+            "openshift.io/display-name": "Jennie's Node.js + Cloudant",
             "description": "An example Node.js application with no database. For more information about using this template, including OpenShift considerations, see https://github.com/jkingoliver/plainnode/blob/master/README.md.",
             "tags": "quickstart,nodejs",
             "iconClass": "icon-nodejs",
@@ -21,6 +21,17 @@
         "app": "plain-nodejs-example"
     },
     "objects": [
+        {
+            "kind": "Service",
+            "apiVersion": "ibmcloud.ibm.com/v1alpha1",
+            "metadata": {
+                "name": "${NAME}"
+            },
+            "spec": {
+                "plan": "lite",
+                "serviceClass": "cloudantnosqldb"
+            }
+        },
         {
             "kind": "Service",
             "apiVersion": "v1",
