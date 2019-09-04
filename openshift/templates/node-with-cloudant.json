@@ -2,11 +2,11 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-        "name": "plain-nodejs-with-cloudant-example-reed",
+        "name": "plain-nodejs-with-cloudant-example-reed1",
         "annotations": {
             "openshift.io/display-name": "Jennie's plain Node.js with Cloudant (reed)",
             "description": "An example Node.js application with no database. For more information about using this template, including OpenShift considerations, see https://github.com/jkingoliver/plainnode/blob/master/README.md.",
-            "tags": "quickstart,nodejs",
+            "tags": "quickstart,nodejs,cloudant",
             "iconClass": "icon-nodejs",
             "openshift.io/long-description": "This template defines resources needed to develop a NodeJS application, including a build configuration and application deployment configuration.  It does not include a database.",
             "openshift.io/provider-display-name": "Red Hat, Inc.",
@@ -17,8 +17,8 @@
     },
     "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.",
     "labels": {
-        "template": "plain-nodejs-example",
-        "app": "plain-nodejs-example"
+        "template": "plain-nodejs-with-cloudant-example-reed1",
+        "app": "plain-nodejs-with-cloudant-example-reed1"
     },
     "objects": [
         {
@@ -161,7 +161,7 @@
                         "imageChangeParams": {
                             "automatic": true,
                             "containerNames": [
-                                "plain-nodejs-example"
+                                "plain-nodejs-with-cloudant-example-reed1"
                             ],
                             "from": {
                                 "kind": "ImageStreamTag",
@@ -187,7 +187,7 @@
                     "spec": {
                         "containers": [
                             {
-                                "name": "plain-nodejs-example",
+                                "name": "plain-nodejs-with-cloudant-example-reed1",
                                 "image": " ",
                                 "ports": [
                                     {
@@ -229,7 +229,7 @@
             "displayName": "Name",
             "description": "The name assigned to all of the frontend objects defined in this template.",
             "required": true,
-            "value": "plain-nodejs-example"
+            "value": "plain-nodejs-with-cloudant-example-reed1"
         },
         {
             "name": "NAMESPACE",
