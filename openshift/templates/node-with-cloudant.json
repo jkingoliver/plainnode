@@ -22,6 +22,17 @@
     },
     "objects": [
         {
+          "kind": "Service",
+          "apiVersion": "ibmcloud.ibm.com/v1alpha1",
+          "metadata": {
+            "name": "${NAME}"
+          },
+          "spec":{
+            "plan": "lite",
+            "serviceClass": "cloudantnosqldb"
+          }
+        },
+        {
             "kind": "Service",
             "apiVersion": "v1",
             "metadata": {
@@ -41,17 +52,6 @@
                 "selector": {
                     "name": "${NAME}"
                 }
-            }
-        },
-        {
-            "kind": "Service",
-            "apiVersion": "ibmcloud.ibm.com/v1alpha1",
-            "metadata": {
-              "name": "${NAME}"
-            },
-            "spec":{
-              "plan": "lite",
-              "serviceClass": "cloudantnosqldb"
             }
         },
         {
