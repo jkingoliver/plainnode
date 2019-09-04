@@ -44,10 +44,10 @@
             }
         },
         {
-            "apiVersion": "ibmcloud.ibm.com/v1alpha1",
             "kind": "Service",
+            "apiVersion": "ibmcloud.ibm.com/v1alpha1",
             "metadata": {
-              "name": "mycloudantfromos1"
+              "name": "${NAME}"
             },
             "spec":{
               "plan": "lite",
